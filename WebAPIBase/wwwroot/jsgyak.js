@@ -20,9 +20,18 @@
             //teszteléshet .innerHTML = `${sor}:${oszlop}`
             ujelemdiv.innerText = `${sor}:${oszlop}`
             //legyen az innerHTML a megfelelő szám
+            ujelemdiv.innerText = faktoriális(sor) / (faktoriális(oszlop) * faktoriális(sor - oszlop));
 
             ujdiv.appendChild(ujelemdiv);
             //új elem div-et vedd fel a sor elemei közé
         }
     }
 };
+
+var faktoriális = function (n) {
+    let er = 1;
+    for (let i = 2; i <= n; i++) {
+        er = er * i;
+    }
+    return er;
+}
